@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="社会福祉法人周陽福祉会 岸津苑・サンハート香月のご利用料金案内。特別養護老人ホーム・ショートステイ・デイサービスの料金をご確認いただけます。">
+<title>ご利用料金｜社会福祉法人 周陽福祉会</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.tab-wrap { display:flex; gap:.5rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+.tab {
+  padding:.5rem 1.4rem; border-radius:999px; font-size:13px; cursor:pointer;
+  border:1.5px solid #F9E0D0; background:#fff; color:#8A7060; transition:all .2s;
+}
+.tab:hover { border-color:#F2994A; color:#F2994A; }
+.tab.active { background:#F2994A; color:#fff; border-color:#F2994A; }
+.panel { display:none; }
+.panel.active { display:block; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin-bottom:1rem; }
+thead tr { background:#F2994A; color:#fff; }
+thead th { padding:.7rem 1rem; text-align:left; font-weight:500; }
+tbody tr:nth-child(even) { background:#FFF5EE; }
+tbody tr:hover { background:#FFE8D6; }
+tbody td { padding:.65rem 1rem; border-bottom:1px solid #F9E0D0; }
+td.num { text-align:right; font-variant-numeric:tabular-nums; }
+td.cat { color:#8A7060; font-size:12px; background:#FFF8F4; padding:.4rem 1rem; }
+tr.subtotal td { background:#FFF0E4; font-weight:500; border-top:2px solid #F2994A; }
+.badge { display:inline-block; font-size:10px; padding:.15rem .5rem; border-radius:4px; margin-left:.4rem; vertical-align:middle; }
+.badge-req { background:#FFF0E4; color:#F2994A; }
+.badge-opt { background:#EDF6FC; color:#4A8AB0; }
+.disclaimer { font-size:11px; color:#8A7060; line-height:1.9; background:#fff; border:1px solid #F9E0D0; border-radius:12px; padding:1rem 1.2rem; margin-top:1.2rem; }
+.disclaimer li { margin-left:1.2rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="44" height="32" viewBox="0 0 220 160" fill="none">
+      <ellipse cx="72" cy="98" rx="44" ry="34" fill="none" stroke="#F2994A" stroke-width="5"/>
+      <path d="M72 68 C75 50 90 38 115 34 C135 30 148 42 148 42" stroke="#F2994A" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M82 62 C88 42 104 30 130 28 C152 26 165 40 165 40" stroke="#F2994A" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M90 60 C98 42 116 32 144 32 C168 32 180 46 178 56" stroke="#F2994A" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M96 62 C106 48 124 40 152 42 C174 44 184 58 182 68" stroke="#F2994A" stroke-width="5" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="nav-logo-text">
+      <div class="name">社会福祉法人 周陽福祉会</div>
+      <div class="sub">岸津苑・サンハート香月</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">ホーム</a>
+    <a href="price.html" class="active">ご利用料金</a>
+    <a href="recruit.html">採用情報</a>
+    <a href="index.html#access">アクセス</a>
+    <a href="tel:0835-24-0511" class="nav-tel">📞 0835-24-0511</a>
+  </div>
+</nav>
+
+<div style="background:linear-gradient(135deg,#FFF0E8,#FEF6F0);padding:3rem;border-bottom:2px solid #F9E0D0">
+  <div class="section-label">PRICE</div>
+  <h1 style="font-size:26px;font-weight:400;margin-bottom:.6rem">ご利用料金</h1>
+  <p style="font-size:13px;color:#8A7060;line-height:1.9;max-width:600px">
+    料金は介護度・所得段階によって異なります。目安としてご参照ください。<br>
+    詳しくはお気軽にお問い合わせください。
+  </p>
+  <div style="display:inline-flex;gap:1.2rem;margin-top:1rem;font-size:12px;color:#8A7060">
+    <span><span class="badge badge-req">必須</span> 必ずかかる費用</span>
+    <span><span class="badge badge-opt">任意</span> 希望者のみ</span>
+  </div>
+</div>
+
+<div style="padding:2.5rem 3rem">
+
+  <!-- ===== 岸津苑 ===== -->
+  <h2 style="font-size:18px;font-weight:500;margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:2px solid #F9E0D0">
+    🏠 特別養護老人ホーム 岸津苑
+  </h2>
+  <div class="tab-wrap">
+    <div class="tab active" onclick="switchTab('kishu-tabed', this, 'kishu')">多床室（従来型）</div>
+    <div class="tab" onclick="switchTab('kishu-kojin', this, 'kishu')">従来型個室</div>
+    <div class="tab" onclick="switchTab('kishu-short', this, 'kishu')">ショートステイ</div>
+  </div>
+
+  <!-- 多床室 -->
+  <div class="panel active" id="kishu-tabed" data-group="kishu">
+    <table>
+      <thead><tr><th>項目</th><th>内容</th><th class="num">1日あたり（円）</th></tr></thead>
+      <tbody>
+        <tr><td colspan="3" class="cat">介護サービス費（介護保険1割負担）</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護1</td><td class="num">573</td></tr><!-- ★料金変更時はここを編集 -->
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護2</td><td class="num">641</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護3</td><td class="num">712</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護4</td><td class="num">780</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護5</td><td class="num">847</td></tr>
+        <tr><td colspan="3" class="cat">居住費・食費（第4段階）</td></tr>
+        <tr><td>居住費 <span class="badge badge-req">必須</span></td><td>多床室</td><td class="num">855</td></tr>
+        <tr><td>食費 <span class="badge badge-req">必須</span></td><td>1日3食</td><td class="num">1,445</td></tr>
+        <tr><td colspan="3" class="cat">その他</td></tr>
+        <tr><td>日常生活費 <span class="badge badge-req">必須</span></td><td>消耗品・レク材料等</td><td class="num">100</td></tr>
+        <tr><td>理美容代 <span class="badge badge-opt">任意</span></td><td>月1回程度</td><td class="num">—</td></tr>
+        <tr class="subtotal"><td colspan="2">月額目安合計（要介護3・第4段階）</td><td class="num">約97,000円〜</td></tr>
+      </tbody>
+    </table>
+    <div class="disclaimer">
+      <strong style="color:#F2994A">ご注意</strong>
+      <ul>
+        <li>介護保険負担割合が2割・3割の方は上記の2〜3倍になります。</li>
+        <li>居住費・食費は所得段階により負担限度額が設定される場合があります（負担限度額認定）。</li>
+        <li>医療費・日用品購入費等は別途実費となります。</li>
+        <li>上記料金は改定される場合があります。最新情報はお問い合わせください。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 従来型個室 -->
+  <div class="panel" id="kishu-kojin" data-group="kishu">
+    <table>
+      <thead><tr><th>項目</th><th>内容</th><th class="num">1日あたり（円）</th></tr></thead>
+      <tbody>
+        <tr><td colspan="3" class="cat">介護サービス費（介護保険1割負担）</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護1</td><td class="num">573</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護2</td><td class="num">641</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護3</td><td class="num">712</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護4</td><td class="num">780</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護5</td><td class="num">847</td></tr>
+        <tr><td colspan="3" class="cat">居住費・食費（第4段階）</td></tr>
+        <tr><td>居住費 <span class="badge badge-req">必須</span></td><td>従来型個室</td><td class="num">1,668</td></tr>
+        <tr><td>食費 <span class="badge badge-req">必須</span></td><td>1日3食</td><td class="num">1,445</td></tr>
+        <tr><td colspan="3" class="cat">その他</td></tr>
+        <tr><td>日常生活費 <span class="badge badge-req">必須</span></td><td>消耗品・レク材料等</td><td class="num">100</td></tr>
+        <tr><td>理美容代 <span class="badge badge-opt">任意</span></td><td>月1回程度</td><td class="num">—</td></tr>
+        <tr class="subtotal"><td colspan="2">月額目安合計（要介護3・第4段階）</td><td class="num">約122,000円〜</td></tr>
+      </tbody>
+    </table>
+    <div class="disclaimer">
+      <strong style="color:#F2994A">ご注意</strong>
+      <ul>
+        <li>介護保険負担割合が2割・3割の方は上記の2〜3倍になります。</li>
+        <li>居住費・食費は所得段階により負担限度額が設定される場合があります（負担限度額認定）。</li>
+        <li>医療費・日用品購入費等は別途実費となります。</li>
+        <li>上記料金は改定される場合があります。最新情報はお問い合わせください。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ショートステイ -->
+  <div class="panel" id="kishu-short" data-group="kishu">
+    <table>
+      <thead><tr><th>項目</th><th>内容</th><th class="num">1日あたり（円）</th></tr></thead>
+      <tbody>
+        <tr><td colspan="3" class="cat">短期入所サービス費（介護保険1割負担）</td></tr>
+        <tr><td>短期入所サービス費 <span class="badge badge-req">必須</span></td><td>要介護1</td><td class="num">596</td></tr>
+        <tr><td>短期入所サービス費 <span class="badge badge-req">必須</span></td><td>要介護2</td><td class="num">664</td></tr>
+        <tr><td>短期入所サービス費 <span class="badge badge-req">必須</span></td><td>要介護3</td><td class="num">736</td></tr>
+        <tr><td>短期入所サービス費 <span class="badge badge-req">必須</span></td><td>要介護4</td><td class="num">805</td></tr>
+        <tr><td>短期入所サービス費 <span class="badge badge-req">必須</span></td><td>要介護5</td><td class="num">873</td></tr>
+        <tr><td colspan="3" class="cat">居住費・食費</td></tr>
+        <tr><td>居住費 <span class="badge badge-req">必須</span></td><td>多床室</td><td class="num">855</td></tr>
+        <tr><td>食費 <span class="badge badge-req">必須</span></td><td>1日3食</td><td class="num">1,445</td></tr>
+        <tr><td colspan="3" class="cat">その他</td></tr>
+        <tr><td>日常生活費 <span class="badge badge-opt">任意</span></td><td>消耗品等</td><td class="num">100</td></tr>
+        <tr class="subtotal"><td colspan="2">1泊2日目安合計（要介護3）</td><td class="num">約3,100円〜</td></tr>
+      </tbody>
+    </table>
+    <div class="disclaimer">
+      <strong style="color:#F2994A">ご注意</strong>
+      <ul>
+        <li>ショートステイは連続30日を超えてご利用いただけません。</li>
+        <li>介護保険の支給限度額の範囲内でのご利用となります。</li>
+        <li>上記料金は改定される場合があります。最新情報はお問い合わせください。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="height:2.5rem"></div>
+
+  <!-- ===== サンハート香月 ===== -->
+  <h2 style="font-size:18px;font-weight:500;margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:2px solid #F9E0D0">
+    🌸 特別養護老人ホーム サンハート香月（ユニット型）
+  </h2>
+  <div class="tab-wrap">
+    <div class="tab active" onclick="switchTab('katsu-unit', this, 'katsu')">ユニット型個室</div>
+  </div>
+  <div class="panel active" id="katsu-unit" data-group="katsu">
+    <table>
+      <thead><tr><th>項目</th><th>内容</th><th class="num">1日あたり（円）</th></tr></thead>
+      <tbody>
+        <tr><td colspan="3" class="cat">介護サービス費（介護保険1割負担）</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護1</td><td class="num">570</td></tr><!-- ★料金変更時はここを編集 -->
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護2</td><td class="num">638</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護3</td><td class="num">711</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護4</td><td class="num">778</td></tr>
+        <tr><td>介護サービス費 <span class="badge badge-req">必須</span></td><td>要介護5</td><td class="num">845</td></tr>
+        <tr><td colspan="3" class="cat">居住費・食費（第4段階）</td></tr>
+        <tr><td>居住費 <span class="badge badge-req">必須</span></td><td>ユニット型個室</td><td class="num">2,006</td></tr>
+        <tr><td>食費 <span class="badge badge-req">必須</span></td><td>1日3食</td><td class="num">1,445</td></tr>
+        <tr><td colspan="3" class="cat">その他</td></tr>
+        <tr><td>日常生活費 <span class="badge badge-req">必須</span></td><td>消耗品・レク材料等</td><td class="num">100</td></tr>
+        <tr><td>理美容代 <span class="badge badge-opt">任意</span></td><td>月1回程度</td><td class="num">—</td></tr>
+        <tr class="subtotal"><td colspan="2">月額目安合計（要介護3・第4段階）</td><td class="num">約130,000円〜</td></tr>
+      </tbody>
+    </table>
+    <div class="disclaimer">
+      <strong style="color:#F2994A">ご注意</strong>
+      <ul>
+        <li>介護保険負担割合が2割・3割の方は上記の2〜3倍になります。</li>
+        <li>居住費・食費は所得段階により負担限度額が設定される場合があります。</li>
+        <li>医療費・日用品購入費等は別途実費となります。</li>
+        <li>上記料金は改定される場合があります。最新情報はお問い合わせください。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- お問い合わせ -->
+  <div style="background:#FFF0E8;border-radius:16px;padding:2rem;margin-top:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+    <div>
+      <div style="font-size:15px;font-weight:500;margin-bottom:.3rem">料金についてご不明な点はお気軽にどうぞ</div>
+      <div style="font-size:12px;color:#8A7060">介護度・所得段階に応じた詳細な試算もご案内できます。平日 8:30〜17:30</div>
+    </div>
+    <a href="tel:0835-24-0511" class="btn-orange" style="font-size:14px;white-space:nowrap">📞 0835-24-0511</a>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-name">社会福祉法人 周陽福祉会</div>
+    <div>岸津苑・サンハート香月</div>
+  </div>
+  <div>© 2024 Shuyou Fukushikai. All rights reserved.</div>
+</footer>
+
+<script>
+function switchTab(targetId, clickedTab, group) {
+  // 同グループのパネルを全部隠す
+  document.querySelectorAll('[data-group="' + group + '"]').forEach(p => p.classList.remove('active'));
+  // クリックされたタブと同グループのタブを全部リセット
+  clickedTab.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  // 対象を表示
+  document.getElementById(targetId).classList.add('active');
+  clickedTab.classList.add('active');
+}
+</script>
+
+</body>
+</html>
