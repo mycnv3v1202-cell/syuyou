@@ -1,0 +1,209 @@
+/* ===== 周陽福祉会 共通スタイル ===== */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --orange:    #F2994A;
+  --orange-lt: #FFF0E8;
+  --text:      #4A3728;
+  --muted:     #8A7060;
+  --cream:     #FFFAF6;
+  --white:     #ffffff;
+  --border:    #F9E0D0;
+  --border-md: #DDD0C4;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ===== ナビゲーション ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  border-bottom: 2px solid var(--orange);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.nav-logo-text .name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+.nav-logo-text .sub {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--orange); }
+
+.nav-tel {
+  background: var(--orange);
+  color: #fff !important;
+  padding: .5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===== フッター ===== */
+footer {
+  background: #4A3728;
+  color: rgba(255,255,255,.6);
+  padding: 1.8rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .footer-name {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: .2rem;
+}
+
+/* ===== 共通パーツ ===== */
+.section-label {
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: .4rem;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.btn-orange {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: .7rem 2rem;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity .2s;
+}
+
+.btn-orange:hover { opacity: .85; }
+
+.btn-outline {
+  display: inline-block;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  padding: .65rem 1.8rem;
+  border-radius: 999px;
+  font-size: 13px;
+  transition: all .2s;
+}
+
+.btn-outline:hover { background: var(--orange); color: #fff; }
+
+/* 画像プレースホルダー */
+.img-slot {
+  background: #F0EBE3;
+  border: 2px dashed var(--border-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  color: #B0988A;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* タグ */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: .2rem .7rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+.tag-seiki  { background: #FFF0E4; color: var(--orange); border: 1px solid #F9D0B0; }
+.tag-part   { background: #EDF6FC; color: #4A8AB0;       border: 1px solid #B0D4E8; }
+.tag-chuto  { background: #F0F8E8; color: #5A8A30;       border: 1px solid #B0D890; }
+
+/* カード */
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1.5px solid var(--border);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welfare-wrap { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+.welfare-tag {
+  font-size: 11px;
+  background: #FFF8F4;
+  color: var(--muted);
+  padding: .2rem .6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin-bottom: 1.2rem;
+}
+
+.info-box {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: .8rem 1rem;
+}
+
+.info-box .info-label {
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--orange);
+  margin-bottom: .2rem;
+}
+
+.info-box .info-value {
+  font-size: 13px;
+  font-weight: 500;
+}
